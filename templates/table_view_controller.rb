@@ -52,7 +52,7 @@ class  < UITableViewController
   def tableView(tableView, commitEditingStyle:editingStyle forRowAtIndexPath:indexPath)
     if editingStyle == UITableViewCellEditingStyleDelete
       # Delete the row from the data source
-      tableView.deleteRowsAtIndexPaths:[indexPath] withRowAnimation:UITableViewRowAnimationFade
+      tableView.deleteRowsAtIndexPaths(indexPath, withRowAnimation:UITableViewRowAnimationFade)
     elsif editingStyle == UITableViewCellEditingStyleInsert
       # Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     end
@@ -77,7 +77,7 @@ class  < UITableViewController
 
   def tableView(tableView, didSelectRowAtIndexPath:indexPath)
     # Navigation logic may go here. Create and push another view controller.
-    # detailViewController = DetailViewController.alloc.initWithNibName("Nib name", bundle:nil]
+    # detailViewController = DetailViewController.alloc.initWithNibName("Nib name", bundle:nil)
     # Pass the selected object to the new view controller.
     # self.navigationController.pushViewController(detailViewController, animated:true)
   end
