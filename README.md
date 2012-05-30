@@ -11,11 +11,11 @@ This project aims to provide boilerplate file templates for RubyMotion, similar 
 
     cd rubymotion_generators
     thor motion:generate view welcome #=> app/welcome_view.rb
-    thor motion:generate table_view_controller people #=> generates app/people_table_view_controller.rb
+    thor motion:generate table_view_controller people #=> app/people_table_view_controller.rb
 
 ## Current Limitations
 
-The output files are created the rubymotion_generators project so you'll need to copy them into your app. This will not be necessary once the project becomes a gem.
+The output files are created within the rubymotion_generators project so will need to be manually copied into your app. This will not be necessary once the project becomes a gem.
 
 ## To Do
 
