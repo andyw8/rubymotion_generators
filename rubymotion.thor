@@ -12,6 +12,10 @@ class Motion < Thor
       generate_view name
     when 'table_view_controller'
       generate_table_view_controller name
+    when 'view_controller'
+      generate_view_controller name
+    when 'table_view_cell'
+      generate_table_view_cell
     else
       puts "Invalid template name '#{template_name}'"
       exit
@@ -24,14 +28,28 @@ class Motion < Thor
     output_path = "#{name}_view.rb"
     template('templates/view.rb', output_path)
     class_name = name.capitalize + "View"
-    insert_into_file(output_path, class_name, :before => ' < UIView')
+    insert_into_file(output_path, class_name, :after => 'class ')
   end
 
   def generate_table_view_controller(name)
     output_path = "#{name}_table_view_controller.rb"
     template('templates/table_view_controller.rb', output_path)
     class_name = name.capitalize + "TableViewController"
-    insert_into_file(output_path, class_name, :before => ' < UITableViewController')
+    insert_into_file(output_path, class_name, :after => 'class ')
+  end
+
+  def generate_view_controller(name)
+    output_path = "#{name}_view_controller.rb"
+    template('templates/view_controller.rb', output_path)
+    class_name = name.capitalize + "ViewController"
+    insert_into_file(output_path, class_name, :after => 'class ')
+  end
+
+  def generate_table_view_cell(name)
+    output_path = "#{name}_table_view_cell.rb"
+    template('templates/table_view_cell.rb', output_path)
+    class_name = name.capitalize + "TableViewCell"
+    insert_into_file(output_path, class_name, :after => 'class ')
   end
 
   def self.source_root

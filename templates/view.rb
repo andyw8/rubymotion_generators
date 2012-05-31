@@ -1,5 +1,4 @@
 class  < UIView
-
 =begin
   # Only override drawRect if you perform custom drawing.
   # An empty implementation adversely affects performance during animation.
@@ -7,5 +6,4 @@ class  < UIView
     # Drawing code
   end
 =end
-
 end
