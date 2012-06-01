@@ -1,11 +1,13 @@
 class  < UITableViewController
   def viewDidLoad
     super
-
     # Uncomment the following line to preserve selection between presentations.
+
     # self.clearsSelectionOnViewWillAppear = false
 
-    # Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    # Uncomment the following line to display an Edit button in the navigation
+    # bar for this view controller.
+
     # self.navigationItem.rightBarButtonItem = self.editButtonItem
   end
 
@@ -54,7 +56,8 @@ class  < UITableViewController
       # Delete the row from the data source
       tableView.deleteRowsAtIndexPaths(indexPath, withRowAnimation:UITableViewRowAnimationFade)
     elsif editingStyle == UITableViewCellEditingStyleInsert
-      # Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+      # Create a new instance of the appropriate class, insert it into the
+      # array, and add a new row to the table view
     end
   end
 =end
