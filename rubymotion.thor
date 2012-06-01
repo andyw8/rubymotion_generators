@@ -8,13 +8,13 @@ class Motion < Thor
     template_name = args[0]
     name = args[1]
     case template_name
-    when 'view'
+    when 'v'
       generate_view name
-    when 'table_view_controller'
+    when 'tvc'
       generate_table_view_controller name
-    when 'view_controller'
+    when 'vc'
       generate_view_controller name
-    when 'table_view_cell'
+    when 'tvcell'
       generate_table_view_cell
     else
       puts "Invalid template name '#{template_name}'"
