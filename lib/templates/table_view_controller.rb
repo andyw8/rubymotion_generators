@@ -35,8 +35,8 @@ class  < UITableViewController
   end
 
   def tableView(tableView, cellForRowAtIndexPath:indexPath)
-    CellIdentifier = "Cell"
-    cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
+    cellIdentifier = self.class.name
+    cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
     # Configure the cell...
     cell
   end
