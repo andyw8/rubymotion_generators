@@ -32,6 +32,7 @@ Or install it yourself as:
 * vc - ViewController
 * tvc - TableViewController
 * tbapp - TabBar app (AppDelegate with two ViewController examples)
+* tvapp - TableView app (AppDelegate with a TableViewController example)
 
 ## ToDo
 

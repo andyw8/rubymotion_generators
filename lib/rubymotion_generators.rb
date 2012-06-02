@@ -27,7 +27,7 @@ module RubymotionGenerators
         generate_view_controller 'second'
       when 'tvapp'
         generate_table_view_app_delegate
-        generate_view_controller 'example'
+        generate_table_view_controller 'example'
       else
         puts "Invalid template name '#{template_name}'"
         exit 1
