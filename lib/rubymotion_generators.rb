@@ -6,12 +6,10 @@ module RubymotionGenerators
     include Thor::Actions
 
     desc "generate", "Generate a new file of the specified type"
-    #desc "generate_table_view_controller", "Generate a new class which inherits from UITableViewController"
 
     def generate(*args)
       # unsure why this flatten step is needed
       args = args.flatten
-      puts args.inspect
       template_name = args[0]
       name = args[1]
       unless name
