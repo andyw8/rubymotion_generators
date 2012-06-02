@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    rubymotion_generators (0.0.1)
+      thor (~> 0.15)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -33,5 +39,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aruba
-  thor (~> 0.15)
+  aruba (~> 0.4)
+  rubymotion_generators!

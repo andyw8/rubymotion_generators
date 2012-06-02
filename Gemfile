@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'thor', '~> 0.15'
-gem 'aruba', '~> 0.4'
+# Specify your gem's dependencies in rubymotion_generators.gemspec
+gemspec
