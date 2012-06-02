@@ -18,12 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-    rmgen <template> <name>
+    motion_g <template> <name>
 
 ## Example
 
     motion create MyApp
-    rmgen vc welcome #=> app/views/welcome_view_controller.rb
+    motion_g vc welcome #=> app/views/welcome_view_controller.rb
 
 ## Available Generators
 

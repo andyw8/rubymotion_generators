@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "rubymotion_generators"
   gem.require_paths = ["lib"]
   gem.version       = RubymotionGenerators::VERSION
-  gem.executables   = ["rmgen"]
+  gem.executables   = ["motion_g"]
 
   gem.add_dependency('thor', '~> 0.15')
   gem.add_development_dependency('aruba', '~> 0.4')
