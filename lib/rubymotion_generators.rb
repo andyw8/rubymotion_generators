@@ -28,7 +28,7 @@ module RubymotionGenerators
       when 'tbapp'
         generate_tab_bar_app_delegate name
         generate_view_controller 'first'
-        generate_view_controller 'sceond'
+        generate_view_controller 'second'
       else
         puts "Invalid template name '#{template_name}'"
         exit 1
@@ -56,6 +56,7 @@ module RubymotionGenerators
       template('templates/view_controller.rb', output_path)
       class_name = name.capitalize + "ViewController"
       insert_into_file(output_path, class_name, :after => 'class ')
+      insert_into_file(output_path, name.capitalize, :after => 'title = "')
     end
 
     def generate_table_view_cell(name)
@@ -68,8 +69,6 @@ module RubymotionGenerators
     def generate_tab_bar_app_delegate(name)
       output_path = "app/app_delegate.rb"
       template('templates/tab_bar_app_delegate.rb', output_path)
-      class_name = name.capitalize + "View"
-      insert_into_file(output_path, class_name, :after => 'class ')
     end
 
     def self.source_root
