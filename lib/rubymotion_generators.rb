@@ -17,13 +17,13 @@ module RubymotionGenerators
         exit 1
       end
       case template_name
-      when 'v'
+      when 'view'
         generate_view name
-      when 'tvc'
-        generate_table_view_controller name
       when 'vc'
         generate_view_controller name
-      when 'tvcell'
+      when 'tvc'
+        generate_table_view_controller name
+      when 'cell'
         generate_table_view_cell
       when 'tbapp'
         generate_tab_bar_app_delegate name
@@ -56,7 +56,6 @@ module RubymotionGenerators
       template('templates/view_controller.rb', output_path)
       class_name = name.capitalize + "ViewController"
       insert_into_file(output_path, class_name, :after => 'class ')
-      insert_into_file(output_path, name.capitalize, :after => 'title = "')
     end
 
     def generate_table_view_cell(name)

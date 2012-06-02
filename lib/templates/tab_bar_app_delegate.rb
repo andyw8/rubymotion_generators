@@ -2,7 +2,10 @@ class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     tabbar = UITabBarController.alloc.init
-    tabbar.viewControllers = [FirstViewController.alloc.init, SecondViewController.alloc.init]
+    first_view_controller = FirstViewController.alloc.init
+    second_view_controller = SecondViewController.alloc.init
+    tabbar.viewControllers = [first_view_controller, second_view_controller]
+    tabbar.title = NSBundle.mainBundle.infoDictionary["CFBundleName"]
     @window.rootViewController = UINavigationController.alloc.initWithRootViewController(tabbar)
     @window.makeKeyAndVisible
     true
@@ -38,15 +41,15 @@ class AppDelegate
   end
 
 =begin
-    # Optional UITabBarControllerDelegate method.
-    def tabBarController(tabBarController, didSelectViewController:viewController)
-    end
+  # Optional UITabBarControllerDelegate method.
+  def tabBarController(tabBarController, didSelectViewController:viewController)
+  end
 =end
 
 =begin
-    # Optional UITabBarControllerDelegate method.
-    def tabBarController(tabBarController, didEndCustomizingViewControllers:viewControllers, changed:changed)
-    end
+  # Optional UITabBarControllerDelegate method.
+  def tabBarController(tabBarController, didEndCustomizingViewControllers:viewControllers, changed:changed)
+  end
 =end
 end
 

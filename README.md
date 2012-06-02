@@ -18,17 +18,26 @@ Or install it yourself as:
 
 ## Usage
 
-    rmgen v welcome #=> app/welcome_view.rb
-    rmgen tvcell person #=> app/person_table_view_cell.rb
-    rmgen vc person #=> app/person_view_controller.rb
-    rmgen tvc people #=> app/people_table_view_controller.rb
+    rmgen <template> <name>
+
+## Example
+
+    motion create MyApp
+    rmgen vc welcome #=> app/views/welcome_view_controller.rb
+
+## Available Generators
+
+* view - View
+* cell - TableViewCell
+* vc - ViewController
+* tvc - TableViewController
+* tbapp - TabBar app (AppDelegate with two ViewController examples)
 
 ## ToDo
 
-- AppDelegate (TabBar, etc.)
 - iPad option
 - Tests
-- Ability to specify file path
+- Built-in help
 
 ## Contributing
 
