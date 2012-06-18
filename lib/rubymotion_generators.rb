@@ -22,7 +22,7 @@ module RubymotionGenerators
       when 'cell'
         generate_table_view_cell
       when 'tbapp'
-        generate_tab_bar_app_delegate name
+        generate_tab_bar_app_delegate
         generate_view_controller 'first'
         generate_view_controller 'second'
       when 'tvapp'
