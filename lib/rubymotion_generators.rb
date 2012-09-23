@@ -28,6 +28,9 @@ module RubymotionGenerators
       when 'tvapp'
         generate_table_view_app_delegate
         generate_table_view_controller 'example'
+      when 'svapp'
+        generate_single_view_app_delegate
+        generate_view_controller 'example'
       else
         puts "Invalid template name '#{template_name}'"
         exit 1
@@ -72,6 +75,11 @@ module RubymotionGenerators
     def generate_table_view_app_delegate
       output_path = "app/app_delegate.rb"
       template('templates/table_view_app_delegate.rb', output_path)
+    end
+
+    def generate_single_view_app_delegate
+      output_path = "app/app_delegate.rb"
+      template('templates/single_view_app_delegate.rb', output_path)
     end
 
     def self.source_root
