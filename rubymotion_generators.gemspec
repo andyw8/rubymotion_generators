@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('thor', '~> 0.15')
   gem.add_development_dependency('aruba', '~> 0.4')
+  gem.add_development_dependency('pry', '~> 0.9.12')
 end
