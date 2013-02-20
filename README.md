@@ -16,6 +16,8 @@ Or install it yourself as:
 
     $ gem install rubymotion_generators
 
+(if you're using rbenv you may need to `rbenv rehash` afterwards)
+
 ## Usage
 
     motion_g <template> <name>
