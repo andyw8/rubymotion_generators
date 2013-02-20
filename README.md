@@ -27,12 +27,12 @@ Or install it yourself as:
 
 ## Available Generators
 
-* view - View
-* cell - TableViewCell
-* vc - ViewController
-* tvc - TableViewController
-* tbapp - TabBar app (AppDelegate with two ViewController examples)
-* tvapp - TableView app (AppDelegate with a TableViewController example)
+* view - UIView
+* cell - UITableViewCell
+* vc - UIViewController
+* tvc - UITableViewController
+* tbapp - UITabBar app (AppDelegate with two ViewController examples)
+* tvapp - UITableView app (AppDelegate with a TableViewController example)
 
 ## ToDo
 
