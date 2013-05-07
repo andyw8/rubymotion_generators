@@ -51,7 +51,7 @@ class  < UITableViewController
 
 =begin
   # Override to support editing the table view.
-  def tableView(tableView, commitEditingStyle:editingStyle forRowAtIndexPath:indexPath)
+  def tableView(tableView, commitEditingStyle:editingStyle, forRowAtIndexPath:indexPath)
     if editingStyle == UITableViewCellEditingStyleDelete
       # Delete the row from the data source
       tableView.deleteRowsAtIndexPaths(indexPath, withRowAnimation:UITableViewRowAnimationFade)
