@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-require_relative '../lib/rubymotion_generators'
-
-RubymotionGenerators::Core.new.generate ARGV

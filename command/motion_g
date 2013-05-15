@@ -1,0 +1,35 @@
+require 'optparse'
+
+module Motion
+  module Project
+    class DocumentGenerateCommand < Command
+      VERSION = 2.0
+      YARDOC = "yardoc"
+
+      self.name = 'generate'
+      #self.help = 'Generate a API document'
+
+      def run(args)
+        unless File.exist?('Rakefile')
+          $stderr.puts "Run on Root Directoy of RubyMotion Project"
+          exit 1
+        end
+
+        system "#{YARDOC} #{args.join(' ')}"
+      end
+
+    end
+  end
+end
+
+
+
+
+
+
+
+
+# #!/usr/bin/env ruby
+# require_relative '../lib/rubymotion_generators'
+
+# RubymotionGenerators::Core.new.generate ARGV
