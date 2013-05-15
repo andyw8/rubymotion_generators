@@ -9,14 +9,12 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/andyw8/rubymotion_generators"
 
   gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "rubymotion_generators"
   gem.require_paths = ["lib"]
   gem.version       = RubymotionGenerators::VERSION
-  gem.executables   = ["motion_g"]
+  gem.extensions    = ['ext/extconf.rb'] # Command-Line Plugin Installer
 
   gem.add_dependency('thor', '~> 0.15')
   gem.add_development_dependency('aruba', '~> 0.4')
-  gem.add_development_dependency('pry', '~> 0.9.12')
 end
