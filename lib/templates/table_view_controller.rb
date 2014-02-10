@@ -36,7 +36,10 @@ class  < UITableViewController
 
   def tableView(tableView, cellForRowAtIndexPath:indexPath)
     cellIdentifier = self.class.name
-    cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) || begin
+      cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cellIdentifier)
+    end
+    
     # Configure the cell...
     cell
   end
@@ -54,6 +57,8 @@ class  < UITableViewController
   def tableView(tableView, commitEditingStyle:editingStyle, forRowAtIndexPath:indexPath)
     if editingStyle == UITableViewCellEditingStyleDelete
       # Delete the row from the data source
+      # e.g. @your_data.delete_at(indexPath.row)
+      # Remove the row from the table view
       tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimationFade)
     elsif editingStyle == UITableViewCellEditingStyleInsert
       # Create a new instance of the appropriate class, insert it into the
